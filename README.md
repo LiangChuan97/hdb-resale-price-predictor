@@ -180,13 +180,13 @@ The model was trained with tuned parameters to optimise performance on the resal
 <h2 align="center">Top Features of resale price used in the Models </h2>
 
 The models were trained using a combination of property characteristics, location data, and accessibility features, including:
-	•	floor_area_sqft
-	•	remaining_lease_years
-	•	mrt_nearest_distance
-	•	mid (storey level indicator)
-	•	flat_model_tier
-	•	town
-	•	region
+- floor_area_sqft
+- remaining_lease_years
+- mrt_nearest_distance
+- mid (storey level indicator)
+- flat_model_tier
+- town
+- region
 
 These variables were selected based on insights obtained during the exploratory data analysis.
 
