@@ -141,7 +141,7 @@ Floor area is one of the strongest predictors of resale price. Larger flats gene
 
 <h2 align="center">🏢 Higher Storey Level Drives Price</h2>
 
-<p align="center"><img width="1016" height="367" alt="Screenshot 2026-03-07 at 19 24 22" src="https://github.com/user-attachments/assets/7b96b152-24e7-4306-af21-a958f88a7620" />
+<p align="center"><img width="1016" height="821" alt="Screenshot 2026-03-07 at 19 24 22" src="https://github.com/user-attachments/assets/7b96b152-24e7-4306-af21-a958f88a7620" />
 
 Higher floors are often more desirable due to better views, reduced noise, and improved ventilation, which contributes to higher resale values. However, most resale transactions still occur at mid-level floors, where supply is more abundant.
 
@@ -154,19 +154,19 @@ Resale prices vary noticeably across towns and planning areas. Flats located in 
 
 <h2 align="center">🚇 Accessibility to Public Transport</h2>
 
-<p align="center"><img width="1016" height="458" alt="Screenshot 2026-03-07 at 18 47 18" src="https://github.com/user-attachments/assets/daf03a5c-cfd9-4c91-9ad5-74af622cd684" />
+<p align="center"><img width="1016" height="821" alt="Screenshot 2026-03-07 at 18 47 18" src="https://github.com/user-attachments/assets/daf03a5c-cfd9-4c91-9ad5-74af622cd684" />
 
 Flats located closer to MRT stations tend to have higher resale prices. The variable mrt_nearest_distance shows that properties with better transport accessibility often command a price premium.
 
 <h2 align="center">🕒 Age of the Flat Matters </h2>
 
-<p align="center"><img width="1016" height="367" alt="Screenshot 2026-03-07 at 18 51 09" src="https://github.com/user-attachments/assets/afd02e56-06b1-48c5-82cf-8976b22a9864" />
+<p align="center"><img width="1016" height="821" alt="Screenshot 2026-03-07 at 18 51 09" src="https://github.com/user-attachments/assets/afd02e56-06b1-48c5-82cf-8976b22a9864" />
  
 Older flats with shorter remaining lease periods generally have lower resale prices. This highlights the importance of variables such as lease_commence_date and flat_age in predicting resale value.
 
 <h2 align="center">🔗 Correlation Heatmap</h2>
 
-<p align="center"><img width="590" height="523" alt="image" src="https://github.com/user-attachments/assets/c1f19c28-d83e-4cef-be0a-f313eead1b4e" />
+<p align="center"><img width="1016" height="821" alt="image" src="https://github.com/user-attachments/assets/c1f19c28-d83e-4cef-be0a-f313eead1b4e" />
 
 Floor area shows the strongest positive relationship with resale price (0.65), indicating that larger flats command significantly higher prices. Flat age is negatively correlated with price (-0.35), suggesting older flats with shorter remaining leases tend to sell for less, while higher storey levels show a moderate positive impact on resale value.
 
