@@ -1,33 +1,92 @@
-### 🏠 Predicting HDB Resale Prices in Singapore ###
-***
-<h2 align="center"><u>Project Overview</u></h2>
+<h1 align="center">🏠 Machine Learning for HDB Resale Flat Price Estimation</h1>
 
-This project develops a machine learning model to estimate Singapore HDB resale prices using housing characteristics, location data, and nearby amenities. 
+<p align="center">
+<img src="https://img.shields.io/badge/Python-3.14-blue">
+<img src="https://img.shields.io/badge/Model-XGBoost-green">
+<img src="https://img.shields.io/badge/Domain-Real%20Estate-orange">
+<img src="https://img.shields.io/badge/Data-HDB%20Resale-purple">
+<img src="https://img.shields.io/badge/Dashboard-Tableau-red">
+</p>
 
-Using historical transaction data, it identifies key price drivers such as floor size (sq ft), remaining lease (years), distance to mrt, storey, resale transaction price(SGD), HDB town and flat model tier, region and transaction year, providing a data-driven pricing reference for real estate agents when advising on listing and purchase decisions.
+## 🚀 Project Summary
+
+This project develops a machine learning model to estimate HDB resale prices in Singapore using housing characteristics, location attributes, and accessibility features.
+
+Key Highlights:
+
+- Built a machine learning model to predict HDB resale prices using housing characteristics, location attributes, and accessibility features.
+- Conducted exploratory data analysis to identify key drivers of property prices such as floor area, storey level, MRT proximity, and flat age.
+- Engineered additional features including remaining lease and regional housing classification to improve model performance.
+- Compared multiple regression models including Linear Regression, Random Forest, and XGBoost.
+- XGBoost achieved the best performance, explaining 97% of the variance in resale prices.
+- The final model provides a data-driven pricing reference to support real estate agents and buyers in property valuation decisions.
+- Developed a Tableau dashboard to enable interactive exploration of HDB resale market trends.
+
+## 🧠 Skills Demonstrated
+
+- Regression modelling
+- Feature engineering for property pricing
+- Exploratory data analysis
+- Model comparison (Linear Regression, Random Forest, XGBoost)
+- Data visualisation with Tableau
+- Real estate price modelling
+
+## 📑 Table of Contents
+
+- [Project Overview](#-project-overview)
+- [Business Problem](#-business-problem)
+- [Dataset](#-dataset)
+- [Data Cleaning](#-data-cleaning)
+- [Exploratory Data Analysis](-exploratory-data-analysis)
+- [Key Market Insights](-key-market-insights)
+- [Feature Engineering](#-feature-engineering)
+- [Model Development](#-model-development)
+- [Model Evaluation](#-model-evaluation)
+- [Business Insights](#-business-insights)
+- [Business Recommendations](#-business-recommendations)
+- [Business Value](#-business-value)
+- [Limitations](#-limitation)
+- [Tech Stack](#-tech-stack)
+- [Future Improvement](#-future-improvement)
+- [HDB Pricing Decision Tool](#-hdb-pricing-decision-tool)
+
+## 🚀 Project Overview
+
+This project develops a machine learning model to estimate Singapore HDB resale prices using housing characteristics, location data, and nearby amenities.
+
+Using historical transaction data, the analysis identifies key price drivers such as:
+- Floor size
+- Remaining lease
+- Distance to MRT
+- Storey level
+- Town and region
+- Flat model tier
+- Transaction year
+
+The model provides a data-driven pricing reference to support real estate agents when advising buyers and sellers on resale pricing.
 
 The project includes:
-	<p>• exploratory data analysis to identify price drivers</p>
-	<p>• feature engineering to capture housing and accessibility factors</p>
-	<p>• model comparison across multiple regression algorithms</p>
-	<p>• a Tableau dashboard for interactive market exploration</p>
-	<p>• model export for deployment in resale price estimation tools</p>
-	<p>• business insights on key drivers influencing HDB resale prices</p>
-	<p>• data-driven recommendations for agents, buyers, and sellers</p>
-	<p>• discussion of project limitations and potential future improvements</p>
+- Exploratory data analysis to identify price drivers
+- Feature engineering to capture housing and accessibility factors
+- Model comparison across multiple regression algorithms
+- Tableau dashboard for interactive market exploration
+- Model export for resale price estimation tools
+- Business insights on key price drivers
+- Data-driven recommendations for agents, buyers, and sellers
+- Discussion of project limitations and future improvements
 
-***
+## 🏠 Business Problem
 
-<h2 align="center"><u>Business Problem</u></h2>
+Determining the correct listing price for HDB flats can be challenging.
 
-Agents often struggle to determine the correct listing price for HDB flats. By accurately estimating resale prices helps real estate agents:
-	<p>•advise sellers on competitive listing prices</p>
-	<p>•help buyers determine fair market value</p>
-	<p>•identify undervalued investment opportunities</p>
+Pricing too high may reduce buyer interest, while pricing too low may result in lost value for sellers.
 
-***
+A predictive pricing model can help agents:
+- Advise sellers on competitive listing prices
+- Help buyers determine fair market value
+- Identify undervalued investment opportunities
 
-<h2 align="center"><u>Dataset</u></h2>
+## 🗂 Dataset
 
 The dataset contains historical HDB resale transactions and property characteristics which was sourced from <a href = "https://www.kaggle.com/competitions/dsi-sg-project-2-regression-challenge-hdb-price/data"> kaggle. </a> 
 
@@ -35,33 +94,29 @@ Target variable:
 
 resale_price
 
-Example features:
-	<p>•town</p>
-	<p>•flat_type</p>
-	<p>•floor_area_sqm</p>
-	<p>•lease_commence_date</p>
-	<p>•mrt_nearest_distance</p>
-	<p>•storey</p>
-	<p>•planning_area</p>
+Example features include:
+- town
+- flat_type
+- floor_area_sqm
+- lease_commence_date
+- mrt_nearest_distance
+- storey
+- planning_area
 
 The dataset also includes geographic coordinates and amenity proximity features.
 
-***
+## 🧹 Data Cleaning
 
-<h2 align="center"><u>Project Workflow</u></h2>
+The following preprocessing steps were applied:
+- Handling missing values for amenity variables
+- Verifying absence of duplicate records
+- Removing irrelevant variables
+- Converting binary indicators to boolean format
+- Ensuring correct data types for all features
+- Extracting transaction year and month
+- Exporting cleaned dataset for analysis
 
-1. Data Cleaning
-
-Steps performed:
-- handled missing values by filling amenity count variables with 0 where appropriate
-- checked for and verified absence of duplicated records
-- removed irrelevant features to focus on location, transport, and housing-related variables
-- converted binary indicator columns (e.g., MRT and school affiliation variables) to boolean format
-- ensured correct data types for numerical, categorical, and boolean variables
-- validated transaction date fields by extracting year and month from 'Tranc_YearMonth'
-- exported the cleaned dataset for further analysis and modelling
-
-2. Exploratory Data Analysis (EDA)
+## 🔍 Exploratory Data Analysis
 
 Key questions explored:
 - What factors influence HDB resale prices?
@@ -74,60 +129,61 @@ Key questions explored:
 
 These questions help identify the most relevant predictors for the resale price model.
 
+## 📊 Key Market Insights
+
 The resale price of HDB flats varies significantly depending on:
 
 <h2 align="center">Property Size Drives Price</h2>
 
-<img width="1016" height="821" alt="Screenshot 2026-03-07 at 18 44 24" src="https://github.com/user-attachments/assets/9503b49c-65d1-488e-a5fa-d7da53db0130" />
+<p align="center"><img width="1016" height="821" alt="Screenshot 2026-03-07 at 18 44 24" src="https://github.com/user-attachments/assets/9503b49c-65d1-488e-a5fa-d7da53db0130" />
 
 Floor area is one of the strongest predictors of resale price. Larger flats generally command significantly higher prices, showing a clear positive relationship between floor_area_sqm and resale_price. 
 
 <h2 align="center">Higher Storey Level Drives Price</h2>
 
-<img width="1016" height="367" alt="Screenshot 2026-03-07 at 19 24 22" src="https://github.com/user-attachments/assets/7b96b152-24e7-4306-af21-a958f88a7620" />
+<p align="center"><img width="1016" height="367" alt="Screenshot 2026-03-07 at 19 24 22" src="https://github.com/user-attachments/assets/7b96b152-24e7-4306-af21-a958f88a7620" />
 
 Higher floors are often more desirable due to better views, reduced noise, and improved ventilation, which contributes to higher resale values. However, most resale transactions still occur at mid-level floors, where supply is more abundant.
 
 
 <h2 align="center">Location Plays a Major Role </h2>
 
-<img width="1016" height="821" alt="Screenshot 2026-03-07 at 18 46 18" src="https://github.com/user-attachments/assets/8dabfe7d-b531-446b-969f-54f0fbbede6e" />
+<p align="center"><img width="1016" height="821" alt="Screenshot 2026-03-07 at 18 46 18" src="https://github.com/user-attachments/assets/8dabfe7d-b531-446b-969f-54f0fbbede6e" />
 
 Resale prices vary noticeably across towns and planning areas. Flats located in central or mature estates tend to have higher resale values compared to those in less central locations.
 
 <h2 align="center">Accessibility to Public Transport</h2>
 
-<img width="1016" height="458" alt="Screenshot 2026-03-07 at 18 47 18" src="https://github.com/user-attachments/assets/daf03a5c-cfd9-4c91-9ad5-74af622cd684" />
+<p align="center"><img width="1016" height="458" alt="Screenshot 2026-03-07 at 18 47 18" src="https://github.com/user-attachments/assets/daf03a5c-cfd9-4c91-9ad5-74af622cd684" />
 
 Flats located closer to MRT stations tend to have higher resale prices. The variable mrt_nearest_distance shows that properties with better transport accessibility often command a price premium.
 
 <h2 align="center">Age of the Flat Matters </h2>
 
- <img width="1016" height="367" alt="Screenshot 2026-03-07 at 18 51 09" src="https://github.com/user-attachments/assets/afd02e56-06b1-48c5-82cf-8976b22a9864" />
+<p align="center"><img width="1016" height="367" alt="Screenshot 2026-03-07 at 18 51 09" src="https://github.com/user-attachments/assets/afd02e56-06b1-48c5-82cf-8976b22a9864" />
  
 Older flats with shorter remaining lease periods generally have lower resale prices. This highlights the importance of variables such as lease_commence_date and flat_age in predicting resale value.
 
 <h2 align="center">Correlation Heatmap</h2>
 
-<img width="590" height="523" alt="image" src="https://github.com/user-attachments/assets/c1f19c28-d83e-4cef-be0a-f313eead1b4e" />
+<p align="center"><img width="590" height="523" alt="image" src="https://github.com/user-attachments/assets/c1f19c28-d83e-4cef-be0a-f313eead1b4e" />
 
 Floor area shows the strongest positive relationship with resale price (0.65), indicating that larger flats command significantly higher prices. Flat age is negatively correlated with price (-0.35), suggesting older flats with shorter remaining leases tend to sell for less, while higher storey levels show a moderate positive impact on resale value.
 
-***
+## ⚙️ Feature Engineering
 
-3. Feature Engineering
-
-Additional features created:
+Additional variables were created to improve modelling performance:
 - remaining_lease = 99 - hdb_age
-- region: Categorising planning_area according to the region in Singapore
+- region categorising planning areas by Singapore region
 
-These help capture housing quality and region area. 
+These features help capture:
+- housing lifespan
+- geographical housing patterns
 
-***
-
-4. Model Development
+## 🧠 Model Development
 
 To estimate HDB resale prices, several regression models were developed and compared.
+
 The goal was to identify a model that could accurately predict resale prices while also providing insights into the factors influencing property values.
 
 The modelling workflow included:
@@ -190,19 +246,18 @@ The models were trained using a combination of property characteristics, locatio
 
 These variables were selected based on insights obtained during the exploratory data analysis.
 
-***
+## 📊 Model Evaluation
 
-5. Model Evaluation
-
-
-| | Linear Regression | RandomForest | XGBoost |
+| | Linear Regression | RandomForest | ⭐ XGBoost |
 |---|---|---|---|
 | R2 | 0.872 | 0.925 | 0.970 |
 | RMSE | 51135.77 | 39160.78 | 24958.11|
 | MAE | 36777.51 | 30155.43| 17942.72 |
 
 
-The XGBoost model achieved the best overall performance across all evaluation metrics.
+## 🏆 Best Model
+
+The **XGBoost model** achieved the best predictive performance.
 
 - Highest R² (0.970)
 This means the model explains 97% of the variance in HDB resale prices, indicating a very strong fit to the data.
@@ -224,9 +279,7 @@ The strong performance of XGBoost is likely due to its ability to:
 
 As a result, XGBoost was selected as the final model for predicting HDB resale prices.
 
-***
-
-**Business Insights**
+## 💡 Business Insights
 
 Major drivers of HDB resale prices include:
 - Floor area
@@ -243,54 +296,73 @@ Major drivers of HDB resale prices include:
 <p>✔ Flats closer to MRT stations often sell at higher prices, reflecting the value of transport convenience.
 <p>✔ Older flats with shorter remaining leases tend to have lower resale prices.
 
-***
 
-**Business Recommendations**
+## 💡 Business Recommendations
 
 Real estate agents, buyers should prioritise:
-<p>- larger flats with higher floor area
-<p>- properties near MRT stations
-<p>- flats in high-demand towns such as Queenstown and Bukit Merah
-<p>- newer flats with longer remaining lease
+- larger flats with higher floor area
+- properties near MRT stations
+- flats in high-demand towns such as Queenstown and Bukit Merah
+- newer flats with longer remaining lease
+
+## 💰 Business Value
+
+This model provides a data-driven pricing benchmark for real estate agents.
+
+Benefits include:
+
+- Faster property valuation
+- More accurate listing prices
+- Identification of undervalued flats
+- Improved buyer negotiation insights
 
 These factors significantly influence resale value.
 
-***
 
-**Limitations**
+## ⚠️ Limitations
 
-<p>-5-years gap of data from 2026C
-<p>-cannot account for human factors (proximity to family, jobs,vanity, good primary school, fengshui, inflation)
-<p>-Data cannot capture government policies like homeimprovement programme and lift improvement programme
-<p>-Model estimates fair market value but final transaction pricedepends on various factors such as listing strategy and marketliquidity
+- Dataset contains a 5-year data gap
+- Cannot capture behavioural factors such as buyer preferences
+- Government policies such as HIP or LIP are not included
+- Macroeconomic factors like inflation are not captured
+- Final transaction prices also depend on market liquidity and negotiation
 
-***
+## 🧰 Tech Stack
 
-**Tech Stack**
+🐍 Python
+📊 Pandas
+🤖 Scikit-learn
+📈 Matplotlib / Seaborn
+📊 Tableau
 
-<p>Python
-<p>Pandas
-<p>Scikit-learn
-<p>Matplotlib / Seaborn
-<p>Tableau
 
-***
+## 🚀 Future Improvements
 
-**Future Improvements**
+Possible next steps include:
+- Incorporating buyer preference features
+- Predicting price ranges instead of point estimates
+- Developing a lease-adjusted pricing framework
+- Tailoring market insights by planning area
 
-Possible next steps:
-<p>-Ask client for their priorities when it comes to purchasing
-<p>-Provide price range instead of single point estimate (reducesrisk of overpricing and unrealistic seller expectations)
-<p>-Develop a lease-adjusted pricing framework
-<p>-Tailor marketing messaging by planning area
+## 🏠 HDB Pricing Decision Tool
 
-***
+The trained model can be used as a pricing support tool for real estate agents.
 
-**Model Export**
+Instead of relying solely on comparable listings, the model provides a data-driven estimate of fair market value based on property characteristics.
 
-Users input:
-- floor_area_sqft
-- remaining_lease_years
-- mrt_nearest_distance
-- storey
-- town
+Example input:
+
+- Floor area: 90 sqm
+- Remaining lease: 75 years
+- Distance to MRT: 450m
+- Storey level: 12
+- Town: Queenstown
+
+Predicted resale price:
+
+$612,450
+
+Agents can use this estimate to:
+- benchmark listing prices
+- evaluate buyer offers
+- identify undervalued flats in the market
