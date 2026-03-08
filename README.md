@@ -133,38 +133,38 @@ These questions help identify the most relevant predictors for the resale price 
 
 The resale price of HDB flats varies significantly depending on:
 
-<h2 align="center">Property Size Drives Price</h2>
+<h2 align="center"> 🏠 Property Size Drives Price</h2>
 
 <p align="center"><img width="1016" height="821" alt="Screenshot 2026-03-07 at 18 44 24" src="https://github.com/user-attachments/assets/9503b49c-65d1-488e-a5fa-d7da53db0130" />
 
 Floor area is one of the strongest predictors of resale price. Larger flats generally command significantly higher prices, showing a clear positive relationship between floor_area_sqm and resale_price. 
 
-<h2 align="center">Higher Storey Level Drives Price</h2>
+<h2 align="center">🏢 Higher Storey Level Drives Price</h2>
 
 <p align="center"><img width="1016" height="367" alt="Screenshot 2026-03-07 at 19 24 22" src="https://github.com/user-attachments/assets/7b96b152-24e7-4306-af21-a958f88a7620" />
 
 Higher floors are often more desirable due to better views, reduced noise, and improved ventilation, which contributes to higher resale values. However, most resale transactions still occur at mid-level floors, where supply is more abundant.
 
 
-<h2 align="center">Location Plays a Major Role </h2>
+<h2 align="center">📍 Location Plays a Major Role </h2>
 
 <p align="center"><img width="1016" height="821" alt="Screenshot 2026-03-07 at 18 46 18" src="https://github.com/user-attachments/assets/8dabfe7d-b531-446b-969f-54f0fbbede6e" />
 
 Resale prices vary noticeably across towns and planning areas. Flats located in central or mature estates tend to have higher resale values compared to those in less central locations.
 
-<h2 align="center">Accessibility to Public Transport</h2>
+<h2 align="center">🚇 Accessibility to Public Transport</h2>
 
 <p align="center"><img width="1016" height="458" alt="Screenshot 2026-03-07 at 18 47 18" src="https://github.com/user-attachments/assets/daf03a5c-cfd9-4c91-9ad5-74af622cd684" />
 
 Flats located closer to MRT stations tend to have higher resale prices. The variable mrt_nearest_distance shows that properties with better transport accessibility often command a price premium.
 
-<h2 align="center">Age of the Flat Matters </h2>
+<h2 align="center">🕒 Age of the Flat Matters </h2>
 
 <p align="center"><img width="1016" height="367" alt="Screenshot 2026-03-07 at 18 51 09" src="https://github.com/user-attachments/assets/afd02e56-06b1-48c5-82cf-8976b22a9864" />
  
 Older flats with shorter remaining lease periods generally have lower resale prices. This highlights the importance of variables such as lease_commence_date and flat_age in predicting resale value.
 
-<h2 align="center">Correlation Heatmap</h2>
+<h2 align="center">🔗 Correlation Heatmap</h2>
 
 <p align="center"><img width="590" height="523" alt="image" src="https://github.com/user-attachments/assets/c1f19c28-d83e-4cef-be0a-f313eead1b4e" />
 
@@ -199,7 +199,7 @@ RMSE measures the average difference between predicted resale prices and the act
 Lower RMSE values indicate that the model is making more accurate predictions.
 
 
-<h2 align="center">Linear Regression (Baseline Model) </h2>
+<h2 align="center">📈 Linear Regression (Baseline Model) </h2>
 
 A Linear Regression model was first implemented as a baseline model.
 
@@ -215,7 +215,7 @@ affect resale prices.
 
 While simple, this model helps establish a benchmark for comparing more advanced algorithms.
 
-<h2 align="center">Random Forest Regressor</h2>
+<h2 align="center">🌳 Random Forest Regressor</h2>
 
 A Random Forest Regressor was trained to capture more complex relationships between housing characteristics and resale prices.
 
@@ -225,7 +225,7 @@ This model is particularly useful when relationships between variables are nonli
 - the impact of location on price
 - interactions between flat size and accessibility
 
-<h2 align="center">XGBoost Regressor</h2>
+<h2 align="center">⚡ XGBoost Regressor</h2>
 
 An XGBoost Regressor was also implemented as an advanced machine learning model designed for strong predictive performance.
 
@@ -233,7 +233,7 @@ XGBoost builds trees sequentially, where each new tree improves on the errors of
 
 The model was trained with tuned parameters to optimise performance on the resale price prediction task.
 
-<h2 align="center">Top Features of resale price used in the Models </h2>
+<h2 align="center">⭐ Top Features of resale price used in the Models </h2>
 
 The models were trained using a combination of property characteristics, location data, and accessibility features, including:
 - floor_area_sqft
