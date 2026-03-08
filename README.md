@@ -2,7 +2,7 @@
 
 <p align="center">
 <img src="https://img.shields.io/badge/Python-3.14-blue">
-<img src="https://img.shields.io/badge/Model-XGBoost-green">
+<img src="https://img.shields.io/badge/Model-XGBoost-RBF-green">
 <img src="https://img.shields.io/badge/Domain-Real%20Estate-orange">
 <img src="https://img.shields.io/badge/Data-HDB%20Resale-purple">
 <img src="https://img.shields.io/badge/Dashboard-Tableau-red">
@@ -45,9 +45,9 @@ Key Highlights:
 - [Business Insights](#-business-insights)
 - [Business Recommendations](#-business-recommendations)
 - [Business Value](#-business-value)
-- [Limitations](#-limitation)
+- [Limitations](#-limitations)
 - [Tech Stack](#-tech-stack)
-- [Future Improvement](#-future-improvement)
+- [Future Improvements](#-future-improvements)
 - [HDB Pricing Decision Tool](#-hdb-pricing-decision-tool)
 
 ## 🚀 Project Overview
@@ -255,7 +255,7 @@ These variables were selected based on insights obtained during the exploratory 
 | MAE | 36777.51 | 30155.43| 17942.72 |
 
 
-## 🏆 Best Model
+<h2 align="center">🏆 Best Model </h2>
 
 The **XGBoost model** achieved the best predictive performance.
 
