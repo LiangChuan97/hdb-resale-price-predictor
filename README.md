@@ -2,7 +2,7 @@
 
 <p align="center">
 <img src="https://img.shields.io/badge/Python-3.14-blue">
-<img src="https://img.shields.io/badge/Model-XGBoost-RBF-green">
+<img src="https://img.shields.io/badge/Models-Linear%20Regression%20%7C%20Random%20Forest%20%7C%20⭐%20XGBoost-blue">
 <img src="https://img.shields.io/badge/Domain-Real%20Estate-orange">
 <img src="https://img.shields.io/badge/Data-HDB%20Resale-purple">
 <img src="https://img.shields.io/badge/Dashboard-Tableau-red">
@@ -350,17 +350,17 @@ The trained model can be used as a pricing support tool for real estate agents.
 
 Instead of relying solely on comparable listings, the model provides a data-driven estimate of fair market value based on property characteristics.
 
-Example input:
+### Example Prediction
 
-- Floor area: 90 sqm
-- Remaining lease: 75 years
-- Distance to MRT: 450m
-- Storey level: 12
-- Town: Queenstown
+| Feature | Value |
+|--------|-------|
+| Floor Area | 90 sqm |
+| Remaining Lease | 75 years |
+| Distance to MRT | 450 m |
+| Storey Level | 12 |
+| Town | Queenstown |
 
-Predicted resale price:
-
-$612,450
+**Predicted Resale Price:** **$612,450**
 
 Agents can use this estimate to:
 - benchmark listing prices
